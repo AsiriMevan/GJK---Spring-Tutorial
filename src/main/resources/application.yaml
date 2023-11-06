@@ -1,0 +1,84 @@
+spring:
+  profiles: dev
+  datasource:
+    username: root
+    url: jdbc:mysql://localhost:3306/gjk
+    password: '1234'
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: 'true'
+    hibernate:
+      ddl-auto: update
+server:
+  port: ${SERVER_PORT:9191}
+  error:
+    include-message: always
+
+---
+
+spring:
+  profiles: qa
+  datasource:
+    username: root
+    url: jdbc:mysql://localhost:3306/Test
+    password: '1234'
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: 'true'
+    hibernate:
+      ddl-auto: update
+server:
+  port: ${SERVER_PORT:9191}
+  error:
+    include-message: always
+
+---
+
+spring:
+  profiles: stage
+  datasource:
+    username: root
+    url: jdbc:mysql://localhost:3306/Test
+    password: '1234'
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: 'true'
+    hibernate:
+      ddl-auto: update
+server:
+  port: ${SERVER_PORT:9191}
+  error:
+    include-message: always
+
+---
+
+spring:
+  profiles: prod
+  datasource:
+    username: root
+    url: jdbc:mysql://localhost:3306/Test
+    password: '1234'
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: 'true'
+    hibernate:
+      ddl-auto: update
+server:
+  port: ${SERVER_PORT:9191}
+  error:
+    include-message: always
+
+---
+
+spring:
+  profiles:
+    dev
+
